@@ -1,38 +1,33 @@
-
-*{
-    margin:0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /*Header css*/
 
-header{
-    background-color:black;
-    height:100px;
-    width:100%;
-    z-index:200;
-    
+header {
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.HeaderContent{
-    color:white;
-    
+.HeaderContent h1 {
+    color: white;
+    font-size: 36px;
 }
-header h1{
-    position:absolute;
-    margin-left:600px;
-    margin-top:30px;
 
-}
 
 
 
 /* Main picture*/
-#Main-Picture{
-    width:100%;
-    margin-left:0;
-    position:absolute;
-    border-top:rgb(205, 117, 80) 4px solid;
-    
+#Main-Picture {
+    width: 100%;
+    border-top: 4px solid rgb(205, 117, 80);
+    display: block;
     
 }
 
@@ -40,19 +35,36 @@ header h1{
 
 
 /*Markcus Section*/
-
-.SectionMarkcus{
-    text-align:center;
-    position:relative;
+.SectionMarkcus {
+    position: absolute;
+    top: 50%;  /* Centers the section on the image */
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Ensures it's perfectly centered */
+    display: flex;
     justify-content: center;
-    display:flex;
-    flex-direction: row;
-    
-    
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 100%;
 }
+.SectionMarkcus div {
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    position: relaive}
 
 /*About me*/
 #TextAboutme{
+    transition: all 0.4s ease-in-out;
     text-align:center;
     display:flex;
     align-items:center;
@@ -68,13 +80,24 @@ header h1{
     
 }
 
+#TextExperience{
 
+    transition: all 0.4s ease-in-out;
+    
+}
+
+#TextSkillsHobbies{
+
+    transition: all 0.4s ease-in-out;
+
+}
 
 #AboutMeH3{
     display:none;
     margin-top:70px;
     font-size:15px;
     position:absolute;
+    transition: all 0.4s ease-in-out;
     
 }
 
@@ -139,13 +162,11 @@ header h1{
 }
 
 
-/*Media*/
 
-.MyMedia{
-    margin-top:470px;
-    
-    
-}
+
+
+
+/*Media*/
 .MyMediaTitle{
     position:relative;
     width:100%;
@@ -156,58 +177,72 @@ header h1{
     color:white;
     
 }
+
+.Media {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    flex-wrap: wrap; /* Ensures items wrap properly on small screens */
+    background-color: rgb(62, 67, 94);
+    padding: 2rem 0;
+    gap: 30px; /* Adds space between media items */
+    position: relative; /* Fixes absolute positioning issue */
+}
+
 .MyMediaTitle h2{
     padding-top:10px;
 }
-.Media{
-    position:absolute;
-    display:flex;
-    width:100%;
-    background-color: rgb(62, 67, 94);
-    padding: 2rem 0%;
+
+.MediaItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items inside */
+    text-align: center;
+    padding: 30px;
 }
 
-.image-container{
+.image-container {
     background-color: white;
-    padding:20px;
-    border:4px solid black;
+    padding: 30px;
+    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .image-container p{
     Font-size: 30px;
     line-height:1;
     font-weight:700;
+   
 }
 
-.MediaItem{
-    padding:10px;
-    display:flex;
-    margin-left:145px;
-}
-.MediaIMG{
-    Height:200px;
-    margin:0;
+
+.MediaIMG {
+    height: 200px;
+    display: block;
+    margin-bottom: 10px;
     
 }
-.Content-Media{
-    display:flex;
-    justify-content: center;
+.Content-Media p {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+    color:white;
+   
 }
 
 /*About me css*/
-#AboutMe{
-    margin-top:350px;
-    
-}
+
 #AboutMeH1{
     position:relative;
     width:100%;
-    height:44px;
+    height:66px;
     Text-align:center;
     font-size:28px;
     background-color: black;
     color:white;
     padding-top:15px;
-
+    
 }
 
 .AboutMeText{
